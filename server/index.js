@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 import authRoutes from "./src/routes/authRoutes.js";
-
+// helps in env variables
 dotenv.config();
 
 const PORT = process.env.PORT || process.env.API_PORT;
