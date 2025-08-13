@@ -7,11 +7,6 @@ import { App } from "./App";
 
 import "./index.css";
 
-const router = createBrowserRouter([
-  { path: "/auth", element: <AuthPage /> },
-  { path: "/", element: <DashboardPage /> },
-]);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
