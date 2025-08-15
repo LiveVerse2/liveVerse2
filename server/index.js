@@ -5,7 +5,9 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 import authRoutes from "./src/routes/authRoutes.js";
-// helps in env variables
+import channelsRoutes from "./src/routes/channelsRoutes.js";
+import settingsRoutes from "./src/routes/settingsRoutes.js";
+
 dotenv.config();
 
 const PORT = process.env.PORT || process.env.API_PORT;
@@ -21,6 +23,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/channels", channelsRoutes);
+app.use("/api/settings", settingsRoutes);
 
 const server = http.createServer(app);
 
